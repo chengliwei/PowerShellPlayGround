@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    
+
     environment {
             PATH = "C:\\WINDOWS\\SYSTEM32"
         }
@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Run PowerShell Script') {
             steps {
-                bat 'powershell.exe -File HelloWorld.ps1'
+                bat 'HelloWorld.ps1'
             }
         }
     }
