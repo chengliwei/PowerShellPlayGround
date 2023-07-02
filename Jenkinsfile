@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Run PowerShell Script') {
             steps {
-                bat '.\\HelloWorld.ps1'
+                Status = powershell(label:POWERSHELL: Description", returnStatus: true, script: "HelloWorld.ps1")
             }
         }
     }
