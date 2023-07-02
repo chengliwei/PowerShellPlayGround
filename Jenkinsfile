@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Run PowerShell Script') {
             steps {
-                bat 'HelloWorld.ps1'
+                bat './HelloWorld.ps1'
             }
         }
     }
