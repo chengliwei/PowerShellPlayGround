@@ -1,7 +1,19 @@
 pipeline {
     agent any
+    options {
+        skipDefaultCheckout(true)
+    }
 
     stages {
+
+        stage('Checkout SCM') {
+            steps {
+                script {
+                    checkout scm
+                }
+                
+            }
+        }
 
         
         stage('Run PowerShell Script') {
